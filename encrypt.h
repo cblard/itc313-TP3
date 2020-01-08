@@ -13,10 +13,11 @@ using namespace std;
 
 class Encrypt {
 public:
-
+	Encrypt();
     Encrypt(string plain);
     string getPlain();
     string getCipher();
+    void setCipher(string cipher);
     bool read(bool isPlain, string filename);
     bool write(bool isPlain, string filename);
     string encode();

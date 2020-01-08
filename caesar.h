@@ -8,16 +8,16 @@
 #ifndef CAESAR_H
 #define CAESAR_H
 
+#include "encrypt.h"
 #include <string>
 using namespace std; 
 
 
-class Caesar: public Encrypt {
-
+class Caesar: public Encrypt{
 public:
-    Caesar();
-    string encode();
-    string decode();
+    Caesar(string message);
+    string encode(int decal);
+    string decode(int decal);
 
 };
 

@@ -12,6 +12,10 @@
 
 using namespace std; 
 
+Encrypt::Encrypt(){
+
+}
+
 Encrypt::Encrypt(string plain){
 	m_plain = plain;
 }
@@ -24,6 +28,9 @@ string Encrypt::getCipher(){
 	return m_cipher;
 }
 
+void Encrypt::setCipher(string cipher){
+	m_cipher=cipher;
+}
 bool Encrypt::read(bool isPlain, string filename){
 	ifstream flux(filename);
 	if(flux){

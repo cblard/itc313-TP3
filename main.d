@@ -1,1 +1,1 @@
-main.o: main.cpp encrypt.h
+main.o: main.cpp encrypt.h caesar.h
