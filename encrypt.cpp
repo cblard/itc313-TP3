@@ -36,13 +36,13 @@ bool Encrypt::read(bool isPlain, string filename){
 	if(flux){
 		string message;
 		while (getline(flux, message)){
-			cout << message << endl;
-		}
-		if(isPlain==true){
-			m_plain = message;
-		}
-		else{
-			m_cipher = message;
+			cout << "Contenu du fichier : " << message << endl;
+			if(isPlain==true){
+				m_plain = message;
+			}
+			else{
+				m_cipher = message;
+			}
 		}
 	}
 	else {

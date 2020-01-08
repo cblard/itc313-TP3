@@ -1,23 +1,22 @@
 /** 
-  * Fichier:  caesar.h
+  * Fichier:  caesar2.h
   * Auteur:   C. Blard (christopher_blard@etu.u-bourgogne.fr)
   * Date:     Janvier 2020
   * Cours:    TP3 C++ 
-  * Résumé:   Déclaration de la classe Caesar
+  * Résumé:   Déclaration de la classe Caesar2
   */
 
-#ifndef CAESAR_H
-#define CAESAR_H
+#ifndef CAESAR2_H
+#define CAESAR2_H
 
 #include "encrypt.h"
 #include <string>
 using namespace std; 
 
-
-class Caesar: public Encrypt{
+class Caesar2 : public Encrypt {
 public:
-	Caesar();
-    Caesar(string message);
+    Caesar2();
+    Caesar2(string message);
     string encode(int decal);
     string decode(int decal);
 };

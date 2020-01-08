@@ -9,6 +9,10 @@
 #include "caesar.h"
 #include <iostream>
 
+Caesar::Caesar() : Encrypt(){
+
+}
+
 Caesar::Caesar(string message) : Encrypt(message){
 
 }
@@ -29,6 +33,7 @@ string Caesar::encode(int decal){
 string Caesar::decode(int decal){
 	int car=0;
 	this->m_plain="";
+	cout<<"ici"<<m_cipher;
 	for(int i=0; i<this->m_cipher.size(); i++){
 		car=(int)this->m_cipher.at(i);
 		if((car>96)&&(car<123)){
