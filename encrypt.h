@@ -17,6 +17,7 @@ public:
     Encrypt(string plain);
     string getPlain();
     string getCipher();
+    void setPlain(string plain);
     void setCipher(string cipher);
     bool read(bool isPlain, string filename);
     bool write(bool isPlain, string filename);

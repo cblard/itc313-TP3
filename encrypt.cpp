@@ -28,6 +28,10 @@ string Encrypt::getCipher(){
 	return m_cipher;
 }
 
+void Encrypt::setPlain(string plain){
+	m_plain=plain;
+}
+
 void Encrypt::setCipher(string cipher){
 	m_cipher=cipher;
 }

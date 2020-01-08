@@ -9,6 +9,7 @@
 #include "encrypt.h"
 #include "caesar.h"
 #include "caesar2.h"
+#include "vigenere.h"
 #include <iostream>
 #include <string>
 using namespace std; 
@@ -24,23 +25,34 @@ int main(){
 	Caesar Cesar(messageCesar);
 	Cesar.write(true, "MessageDeCesar");
 	string code = Cesar.encode(3);
-	cout << "Message codé : " << code << "\n";
+	cout << "Message codé (Caesar) : " << code << "\n";
 
 	Caesar Cesar2("");
 	Cesar2.read(false, "MessageDeCesarCode");
 	string decode = Cesar2.decode(3);
-	cout << "Message décodé : " << decode << "\n";
+	cout << "Message décodé (Caesar) : " << decode << "\n";
 
 	// Test de la classe Caesar2
 	string sanglots="Les sanglots longs Des violons De l'automne Blessent mon coeur D'une langueur Monotone.";
 	Caesar2 Poeme(sanglots);
 	Poeme.write(true, "Poeme");
 	code = Poeme.encode(3);
-	cout << "Message codé : "<< code << "\n";
+	cout << "Message codé (Caesar2) : "<< code << "\n";
 
 	Caesar2 Poeme2("");
 	Poeme2.read(false, "PoemeCode");
 	decode = Poeme2.decode(3);
-	cout << "Message décodé : "<<decode<<"\n";
+	cout << "Message décodé (Caesar2) : "<<decode<<"\n";
+
+	// Test de la classe Vigenere 
+	Vigenere Vig("TEST");
+	Vig.setPlain("ETRE OU NE PAS ETRE TELLE EST LA QUESTION");
+	code = Vig.encode();
+	cout << "Message codé (Vigenere) : "<<code; 
+	/*Vigenere Vig2("TEST");
+	Vig2.setCipher("XXJX SM GI ITW XMVW MIDEX WLM DT UMXLXAHG");
+	decode = Vig2.decode();
+	cout << "\nMessage décodé (Vigenere) : "<<decode;*/
+
 	return 0;
 }
