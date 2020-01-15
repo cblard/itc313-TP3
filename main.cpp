@@ -14,10 +14,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <algorithm>
-#include <random>
-#include <time.h>
 using namespace std; 
 
 int main(){
