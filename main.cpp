@@ -10,8 +10,14 @@
 #include "caesar.h"
 #include "caesar2.h"
 #include "vigenere.h"
+#include "enigma.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <random>
+#include <time.h>
 using namespace std; 
 
 int main(){
@@ -48,11 +54,26 @@ int main(){
 	Vigenere Vig("TEST");
 	Vig.setPlain("ETRE OU NE PAS ETRE TELLE EST LA QUESTION");
 	code = Vig.encode();
-	cout << "Message codé (Vigenere) : "<<code; 
-	/*Vigenere Vig2("TEST");
+	cout << "\nMessage codé (Vigenere) : "<<code; 
+	Vigenere Vig2("TEST");
 	Vig2.setCipher("XXJX SM GI ITW XMVW MIDEX WLM DT UMXLXAHG");
 	decode = Vig2.decode();
-	cout << "\nMessage décodé (Vigenere) : "<<decode;*/
+	//cout << "\nMessage décodé (Vigenere) : "<<decode; 	// DÉCODAGE VALABLE POUR LA MOITIÉ DES CARACTÈRES ?? 
+														// À CORRIGER !!!
 
+	// Test de la classe Enigma
+	
+    Enigma Enigm("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 120, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 120);
+    Enigm.setPlain("TEST");
+    cout<<"\nMessage à coder : "<<Enigm.getPlain();
+    code= Enigm.encode();
+    cout<<"\nMessage codé (Enigma) : "<<code;
+    Enigm.setCipher("ZLAC");
+    decode= Enigm.decode();
+    cout<<"\nMessage décodé (Enigma) : "<<decode;   // DÉCODAGE NON FONCTIONNEL ? 
+    												// À CORRIGER
+
+
+    
 	return 0;
 }

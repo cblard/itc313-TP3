@@ -10,7 +10,6 @@
 #define VIGENERE_H
 
 #include "encrypt.h"
-#include <algorithm>
 #include <string>
 using namespace std; 
 

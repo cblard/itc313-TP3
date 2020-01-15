@@ -34,14 +34,13 @@ string Vigenere::encode() {
     return this->m_cipher;
 }
 
-/*string Vigenere::decode() {
+string Vigenere::decode() {
     int car = 0, decal;
     this->m_plain = "";
     for (int i = 0; i < this->m_cipher.size(); i++) {
         if ((this->m_cipher.at(i) >= 'A') && (this->m_cipher.at(i) <= 'Z')) {
             decal = (int)(this->m_key.at(i % this->m_key.size())) - 65;
             car = ((int)this->m_cipher.at(i) - 65 - decal) % 26 + 65;
-            cout<<"char :"<<(char)car<<"\n";
             this->m_plain += (char)car;
         }
         else {
@@ -49,4 +48,4 @@ string Vigenere::encode() {
         }
     }
     return this->m_plain;
-}*/
+}

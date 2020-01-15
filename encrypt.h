@@ -13,7 +13,7 @@ using namespace std;
 
 class Encrypt {
 public:
-	Encrypt();
+    Encrypt();
     Encrypt(string plain);
     string getPlain();
     string getCipher();
@@ -25,7 +25,6 @@ public:
     string decode();
 
 protected:
-
     string m_plain;
     string m_cipher;
 };
